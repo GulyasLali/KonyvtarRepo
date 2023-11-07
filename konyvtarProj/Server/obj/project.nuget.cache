@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9tLvzAobmp3NjJJbzsLcaKoODTyDvXbj2y3HEOnu2BYu1yHiR577scjceAB/ra1474/sgbW9bs3skOi087lN+g==",
+  "dgSpecHash": "8gLOAOabjAXn4oTYQ3Fu6Spy9/tT/HP7+qoXR31aajFRw370qsgzMtOhulpyk2de5CCWUQ86K/mUKHxzMjeZRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Server\\konyvtarProj.Server.csproj",
+  "projectFilePath": "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Server\\konyvtarProj.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lali\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.11\\microsoft.aspnetcore.authorization.7.0.11.nupkg.sha512",

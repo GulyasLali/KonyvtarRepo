@@ -1,4 +1,6 @@
+using konyvtarProj.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+var conn = builder.Configuration.GetConnectionString("Konyvtardb");
+
+builder.Services.AddEntityFrameworkNpgsql()
+            .AddDbContext<ApiDbContext>(opt => opt.UseNpgsql(conn));
+
 
 var app = builder.Build();
 

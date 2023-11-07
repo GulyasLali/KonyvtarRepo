@@ -1781,11 +1781,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Server\\konyvtarProj.Server.csproj",
+      "projectUniqueName": "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Server\\konyvtarProj.Server.csproj",
       "projectName": "konyvtarProj.Server",
-      "projectPath": "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Server\\konyvtarProj.Server.csproj",
+      "projectPath": "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Server\\konyvtarProj.Server.csproj",
       "packagesPath": "C:\\Users\\Lali\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Server\\obj\\",
+      "outputPath": "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1806,11 +1806,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Client\\konyvtarProj.Client.csproj": {
-              "projectPath": "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Client\\konyvtarProj.Client.csproj"
+            "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Client\\konyvtarProj.Client.csproj": {
+              "projectPath": "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Client\\konyvtarProj.Client.csproj"
             },
-            "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Shared\\konyvtarProj.Shared.csproj": {
-              "projectPath": "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Shared\\konyvtarProj.Shared.csproj"
+            "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Shared\\konyvtarProj.Shared.csproj": {
+              "projectPath": "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Shared\\konyvtarProj.Shared.csproj"
             }
           }
         }

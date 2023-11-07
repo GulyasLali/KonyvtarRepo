@@ -1033,11 +1033,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Shared\\konyvtarProj.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Shared\\konyvtarProj.Shared.csproj",
       "projectName": "konyvtarProj.Shared",
-      "projectPath": "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Shared\\konyvtarProj.Shared.csproj",
+      "projectPath": "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Shared\\konyvtarProj.Shared.csproj",
       "packagesPath": "C:\\Users\\Lali\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lali\\Desktop\\School\\Csharp\\konyvtarProj\\Shared\\obj\\",
+      "outputPath": "C:\\Users\\Lali\\Documents\\GitHub\\KonyvtarRepo\\konyvtarProj\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
