@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using konyvtarProj.Server.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace konyvtarProj.Server.Data
 {
@@ -9,5 +10,7 @@ namespace konyvtarProj.Server.Data
         {
 
         }
+
+        public DbSet<Books> Boooks { get; set; }
     }
 }
