@@ -8,6 +8,9 @@
   "resources": {
     "assembly": {
       "Humanizer.dll": "sha256-1oUwdVR9fjA+\/WA1TZEaL\/GO26WCzaL6WdkaLl3Pnpg=",
+      "IKVM.ByteCode.dll": "sha256-COaaInxR\/Bv3Hzfa+pirKefYS6b97YuxPNjUpaLcYds=",
+      "IKVM.Java.dll": "sha256-x\/EjIBs5tF5AlHHBTsCtGa776OPIwg6KURBJG6qBNE4=",
+      "IKVM.Runtime.dll": "sha256-\/yfFyal0zn+VDXGFD2KtQdb7lt05Yg3V7cjRdDkql7A=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-+79HPC+snrhJjzOJbwBnWtkWOY6jdopnEnle7ZiRr7Y=",
       "Microsoft.AspNetCore.Components.dll": "sha256-Ai5PTdfbdzeheOh7Ly3Uoqa3f175oOxvfu2QfxDZGso=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-IcQfwp7uOUAjEcK6s\/W097tVi886KFG0KQicOqtu2SU=",
@@ -37,10 +40,15 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-q4ruoDSCjV\/QJY9ZkzV6uxvEvZUVrDbyUjU3SSh5SlE=",
       "Microsoft.JSInterop.dll": "sha256-hytr5pqieVqq2IfucnWW9rAUb\/motnp3OOgNC48Gvgc=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-UUzI4G04TERG+l+eVxA6xr\/kf7b1\/zAfmIpQFoAUXYw=",
+      "Microsoft.Win32.SystemEvents.dll": "sha256-yklb9shrfwktYkkoEBmFqUFTLRSdzYrP6hcPilO+iFA=",
+      "Mono.Posix.dll": "sha256-TJGfW\/by3OjTxp72A3K9gXLdBXVnMdrVS23a770NQY0=",
       "Mono.TextTemplating.dll": "sha256-57img5VLX+wAnl9OVpb+sxtMXVadVaRjPPWtsObQbOw=",
+      "Mono.Unix.dll": "sha256-mbr9yrbphwj3bWNZx7hVmUaAOF3j1tLw64bYkfEwdP8=",
       "Npgsql.dll": "sha256-s55FHVMDBp1blw3aTxQIY7M1meEknJpm7EMjYvEBKmw=",
       "Npgsql.EntityFrameworkCore.PostgreSQL.dll": "sha256-1iN8x23DZrGKSz4MXodm4iXFmu8VsxHVSIXSXLkAcxY=",
       "System.CodeDom.dll": "sha256-Wux4xpM0\/BzRySb0qchXJg3S4D\/xc56W3vHWgpa4a4s=",
+      "System.Data.Odbc.dll": "sha256-tMNIdd4dkaRUAJwlDRfT8htpYyznjSl+SJ+OA\/+qPCg=",
+      "System.Drawing.Common.dll": "sha256-mNB+ax59NkGoYIo2Cz3Cc\/6KD3iSa24eX2eaegdNSR8=",
       "System.IO.Pipelines.dll": "sha256-P\/MqD0fCBd5bgTM16JC1QC\/Zz7s+CwViyzmDFkBG4\/c=",
       "Microsoft.CSharp.dll": "sha256-Gvu0ys3sPcXXThnuUy8Z3\/uWnOTZ3pUq4N8YecQxUkg=",
       "Microsoft.VisualBasic.Core.dll": "sha256-NgHi32oNWYqlx3qh9Ymr25vNbGYqSUHO97hvnaMjAmI=",
@@ -210,15 +218,15 @@
       "mscorlib.dll": "sha256-X+o60j6cZnlI2vFFjdH81yYTAxx13\/wqnNSWTKbDsyw=",
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
-      "konyvtarProj.Shared.dll": "sha256-1dqHbelNyWzEHidptrliWaMOrozoG8D0Q7RjzF5gRIg=",
-      "konyvtarProj.Client.dll": "sha256-pSDp4ISoKV1TpiTdsccOzz6he18NpYrNnA3zAnEz1I0="
+      "konyvtarProj.Shared.dll": "sha256-3eOuxNCAgWKE9jG6cs23utjnxoHEmb+uMWD0fkTGe8M=",
+      "konyvtarProj.Client.dll": "sha256-5cUa6TA5N8im1LxHjhfTqvJjDiovJjINg15q2oy4TwI="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "konyvtarProj.Shared.pdb": "sha256-kVp9OeNw\/eVmJq71kNt\/v34gsEjvYyOwjkO4kuKtkSc=",
-      "konyvtarProj.Client.pdb": "sha256-X39L9xXOqiBOV4nW235KFKO4SbbsVa6uirva5mb+ETU="
+      "konyvtarProj.Shared.pdb": "sha256-\/5vBlN9Xk3rihhFdySSUR49KVs2uorfkFISbWwDCS4A=",
+      "konyvtarProj.Client.pdb": "sha256-iT07VxAuLcb5VEVlLZhZCkfL3QU6MMVeD\/7KtEFj\/yw="
     },
     "runtime": {
       "dotnet.7.0.11.miiva08vh1.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",

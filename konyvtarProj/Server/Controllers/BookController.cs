@@ -1,5 +1,5 @@
 ﻿using konyvtarProj.Server.Data;
-using konyvtarProj.Server.Models;
+using konyvtarProj.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,4 +1,4 @@
-﻿using konyvtarProj.Server.Models;
+﻿using konyvtarProj.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace konyvtarProj.Server.Data
