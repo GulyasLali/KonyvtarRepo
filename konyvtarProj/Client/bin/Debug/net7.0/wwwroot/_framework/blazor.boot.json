@@ -219,14 +219,14 @@
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
       "konyvtarProj.Shared.dll": "sha256-3eOuxNCAgWKE9jG6cs23utjnxoHEmb+uMWD0fkTGe8M=",
-      "konyvtarProj.Client.dll": "sha256-5cUa6TA5N8im1LxHjhfTqvJjDiovJjINg15q2oy4TwI="
+      "konyvtarProj.Client.dll": "sha256-j+7fd27qbxy+tHWEedaVBdNzkeOvszyB3h+Z09EZtxE="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "konyvtarProj.Shared.pdb": "sha256-\/5vBlN9Xk3rihhFdySSUR49KVs2uorfkFISbWwDCS4A=",
-      "konyvtarProj.Client.pdb": "sha256-iT07VxAuLcb5VEVlLZhZCkfL3QU6MMVeD\/7KtEFj\/yw="
+      "konyvtarProj.Client.pdb": "sha256-zLXyG9xN+92f8gU3CLf5WXcTqQMJobCE3PlUPPoOZWA="
     },
     "runtime": {
       "dotnet.7.0.11.miiva08vh1.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",

@@ -13,10 +13,10 @@ namespace konyvtarProj.Shared.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LibNumber { get; set; }
-        public required string Name { get; set; }
-        public required string Author { get; set; }
-        public required string Publisher { get; set; }
-        public required DateTime PublishDate { get; set; }
+        public string Name { get; set; }
+        public string Author { get; set; }
+        public string Publisher { get; set; }
+        public DateTime PublishDate { get; set; }
 
     }
 }
