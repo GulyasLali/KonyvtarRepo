@@ -218,15 +218,15 @@
       "mscorlib.dll": "sha256-X+o60j6cZnlI2vFFjdH81yYTAxx13\/wqnNSWTKbDsyw=",
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
-      "konyvtarProj.Shared.dll": "sha256-3eOuxNCAgWKE9jG6cs23utjnxoHEmb+uMWD0fkTGe8M=",
-      "konyvtarProj.Client.dll": "sha256-j+7fd27qbxy+tHWEedaVBdNzkeOvszyB3h+Z09EZtxE="
+      "konyvtarProj.Shared.dll": "sha256-yKPNsE9d60f9XJnbXSS3eqnV+\/IvBFSCRVxGT\/OMyIE=",
+      "konyvtarProj.Client.dll": "sha256-dtARYHlwM3UFkt3d4gtAPzvNAumc4EHl1lVJ2WKHynw="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "konyvtarProj.Shared.pdb": "sha256-\/5vBlN9Xk3rihhFdySSUR49KVs2uorfkFISbWwDCS4A=",
-      "konyvtarProj.Client.pdb": "sha256-zLXyG9xN+92f8gU3CLf5WXcTqQMJobCE3PlUPPoOZWA="
+      "konyvtarProj.Shared.pdb": "sha256-Q5guPu+KCmnf\/eM8QjTxywDBsCyjAl+p3lk8JN29+QQ=",
+      "konyvtarProj.Client.pdb": "sha256-9LmpIohnM4+pftM6CtQvvXy\/jw+4Esc3sm6aai6V0yE="
     },
     "runtime": {
       "dotnet.7.0.11.miiva08vh1.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",

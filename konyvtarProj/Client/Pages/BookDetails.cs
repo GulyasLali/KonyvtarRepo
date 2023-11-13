@@ -7,7 +7,7 @@ namespace konyvtarProj.Client.Pages
 {
     public partial class BookDetails
     {
-        protected String message = string.Empty;
+        protected string message = string.Empty;
         protected Books book { get; set; } = new Books();
         [Parameter]
         public string LibNumber { get; set; }
@@ -26,7 +26,15 @@ namespace konyvtarProj.Client.Pages
             }
             else
             {
-                
+                var libn = Convert.ToInt32(LibNumber);
+                var apiBook = await bookService.GetBook(libn);
+
+               if (apiBook != null) { }
+                {
+                    book = apiBook;
+                }
+
+
             }
         }
     }

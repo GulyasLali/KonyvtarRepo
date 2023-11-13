@@ -16,7 +16,7 @@ namespace konyvtarProj.Shared.Models
         public string Name { get; set; }
         public string Author { get; set; }
         public string Publisher { get; set; }
-        public DateTime PublishDate { get; set; }
+        public int PublishDate { get; set; }
 
     }
 }
