@@ -1,0 +1,86 @@
+﻿@page "/konyvresz"
+@page "/konyvresz/{id:int}"
+@inject HttpClient _http
+@inject NavigationManager Navi
+
+
+
+
+@if(Id is null)
+{
+    <PageTitle>Könyv hozzáadása</PageTitle>
+    <h3> Adj hozzá egy könyvet!</h3>
+}
+else
+{
+
+    <PageTitle>@k.Title részletei</PageTitle>
+    <h3> @k.Title </h3>
+}
+
+<EditForm Model="k" OnSubmit="HandleSubmit">
+    <div>
+        <label for="title">Cím</label>
+        <InputText id="title" @bind-Value="k.Title" class="form-control" />
+    </div>
+    <div>
+        <label for="auth">Író</label>
+        <InputText id="auth" @bind-Value="k.Author" class="form-control" />
+    </div>
+    <div>
+        <label for="pub">Kiadó</label>
+        <InputText id="pub" @bind-Value="k.Publisher" class="form-control" />
+    </div>
+    <div>
+        <label for="pubdate">Kiadási Dátum</label>
+        <InputNumber id="pubdate" @bind-Value="k.ReleaseYear" class="form-control" />
+    </div><br/>
+    <button type="submit" class="btn btn-outline-primary">Mentés</button>
+    @if(Id is not null)
+    {
+        <button type="button" class="btn btn-outline-danger" @onclick=DeleteKonyv>Törlés</button>
+    }
+</EditForm>
+
+
+
+@code {
+
+    [Parameter]
+    public int? Id { get; set; }
+
+    Konyv k = new Konyv { Title = "asd", Author = "basd", Publisher = "sasd" };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if(Id is not null)
+        {
+            var res = await _http.GetFromJsonAsync<Konyv>($"api/konyv/{Id}");
+
+            if(res is not null)
+            {
+                k = res;
+            }
+        }
+    }
+
+    async Task DeleteKonyv()
+    {
+        await _http.DeleteAsync($"api/konyv/{Id}");
+        Navi.NavigateTo("/konyv");
+
+    }
+
+    async Task HandleSubmit()
+    {
+        if(Id is null)
+        {
+            await _http.PostAsJsonAsync("api/konyv", k);
+        }
+        else
+        {
+            await _http.PutAsJsonAsync($"api/konyv/{Id}", k);
+        }
+        Navi.NavigateTo("/konyv");
+    }
+}

@@ -1,0 +1,11 @@
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\bin\Debug\net7.0\RealKonyvtar.Shared.deps.json
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\bin\Debug\net7.0\RealKonyvtar.Shared.dll
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\bin\Debug\net7.0\RealKonyvtar.Shared.pdb
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\obj\Debug\net7.0\RealKonyvtar.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\obj\Debug\net7.0\RealKonyvtar.Shared.AssemblyInfoInputs.cache
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\obj\Debug\net7.0\RealKonyvtar.Shared.AssemblyInfo.cs
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\obj\Debug\net7.0\RealKonyvtar.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\obj\Debug\net7.0\RealKonyvtar.Shared.dll
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\obj\Debug\net7.0\refint\RealKonyvtar.Shared.dll
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\obj\Debug\net7.0\RealKonyvtar.Shared.pdb
+C:\Users\Lali\source\repos\RealKonyvtar\RealKonyvtar\Shared\obj\Debug\net7.0\ref\RealKonyvtar.Shared.dll

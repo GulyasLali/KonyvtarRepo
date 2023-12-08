@@ -1,0 +1,60 @@
+﻿@page "/konyv"
+@inject HttpClient _http
+@inject NavigationManager Navi
+<h3>Könyvek</h3>
+
+
+
+<button @onclick="AddB" class="btn btn-dark">Könyv hozzáadása</button>
+<br />
+@if(books is null)
+{
+    <span>Könyvek betöltése...</span>
+}
+else
+{
+
+        <table class="table table-hover table-bordered">
+            <thead>
+                <th>Cím</th>
+                <th>Szerző</th>
+                <th>Kiadó</th>
+                <th>Kiadás dátuma</th>
+                <th></th>
+            </thead>
+                <tbody>
+                     @foreach (var book in books)
+                    {
+                        <tr>
+                            <td>@book.Title</td>
+                            <td>@book.Author</td>
+                            <td>@book.Publisher</td>
+                            <td>@book.ReleaseYear</td>
+                            <td>
+                                <a href="/konyvresz/@book.Id">Részletek</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+        </table>
+}
+       
+
+@code {
+    List<Konyv>? books;
+    //private IEnumerable<Konyv> books { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        //var res = await _http.GetFromJsonAsync<IEnumerable<Konyv>>("api/konyv");
+        var res = await _http.GetFromJsonAsync<List<Konyv>>("api/konyv");
+
+        if (res != null)
+            books = res;
+    }
+
+    void AddB()
+    {
+        Navi.NavigateTo("/konyvresz");
+    }
+}
