@@ -52,8 +52,16 @@ else
     @if(Id is not null)
     {
         <button type="button" class="btn btn-outline-danger" @onclick=DeleteKonyv>Törlés</button>
+        
+        
+    }
+    <br />
+    @if (cnt == 1)
+    {
+        <span>A kiadás éve nem lehet negatív!</span>
     }
 </EditForm>
+
 
 
 
@@ -62,6 +70,8 @@ else
 
     [Parameter]
     public int? Id { get; set; }
+
+    public int cnt = 0;
 
     List<Kolcsonzes>? kolcsonzesek;
     Konyv k = new Konyv { Title = " ", Author = " ", Publisher = " " };
@@ -93,14 +103,21 @@ else
 
     async Task HandleSubmit()
     {
-        if(Id is null)
+        if (k.ReleaseYear < 0)
         {
-            await _http.PostAsJsonAsync("api/konyv", k);
+            cnt = 1;
         }
         else
         {
-            await _http.PutAsJsonAsync($"api/konyv/{Id}", k);
+            if (Id is null)
+            {
+                await _http.PostAsJsonAsync("api/konyv", k);
+            }
+            else
+            {
+                await _http.PutAsJsonAsync($"api/konyv/{Id}", k);
+            }
+            Navi.NavigateTo("/konyv");
         }
-        Navi.NavigateTo("/konyv");
     }
 }

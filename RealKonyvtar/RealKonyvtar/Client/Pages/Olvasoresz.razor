@@ -6,8 +6,8 @@
 
 @if(Id is null)
 {
-    <PageTitle>Könyv hozzáadása</PageTitle>
-    <h3> Adj hozzá egy könyvet!</h3>
+    <PageTitle>Olvasó Regisztrálása</PageTitle>
+    <h3> Regisztrálj új olvasót!</h3>
 }
 else
 {
@@ -34,6 +34,13 @@ else
     @if(Id is not null)
     {
         <button type="button" class="btn btn-outline-danger" @onclick=DeleteReader>Törlés</button>
+        
+       
+    }
+    <br />
+    @if (cnt == 1)
+    {
+        <span>A születési év nem lehet 1900-nál kisebb</span>
     }
 </EditForm>
 
@@ -43,6 +50,8 @@ else
 
     [Parameter]
     public int? Id { get; set; }
+
+    public int cnt = 0;
 
     Reader r = new Reader { Name = " ", Address = " ", BirthDate = new DateTime() };
 
@@ -68,14 +77,21 @@ else
 
     async Task HandleSubmit()
     {
-        if(Id is null)
+        if (r.BirthDate < new DateTime(1900, 1, 1))
         {
-            await _http.PostAsJsonAsync("api/reader", r);
+            cnt = 1;
         }
         else
         {
-            await _http.PutAsJsonAsync($"api/reader/{Id}", r);
+            if (Id is null)
+            {
+                await _http.PostAsJsonAsync("api/reader", r);
+            }
+            else
+            {
+                await _http.PutAsJsonAsync($"api/reader/{Id}", r);
+            }
+            Navi.NavigateTo("/olvaso");
         }
-        Navi.NavigateTo("/olvaso");
     }
 }

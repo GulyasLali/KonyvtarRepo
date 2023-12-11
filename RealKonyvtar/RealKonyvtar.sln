@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealKonyvtar.Client", "Real
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealKonyvtar.Shared", "RealKonyvtar\Shared\RealKonyvtar.Shared.csproj", "{F616FBD2-E499-485B-8CE6-7F099A169650}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealKonyvtar.ServerUnitTests", "RealKonyvtar\RealKonyvtar.ServerUnitTests\RealKonyvtar.ServerUnitTests.csproj", "{31433003-2A37-4258-B1D9-81CBC8C1E497}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F616FBD2-E499-485B-8CE6-7F099A169650}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F616FBD2-E499-485B-8CE6-7F099A169650}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F616FBD2-E499-485B-8CE6-7F099A169650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31433003-2A37-4258-B1D9-81CBC8C1E497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31433003-2A37-4258-B1D9-81CBC8C1E497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31433003-2A37-4258-B1D9-81CBC8C1E497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31433003-2A37-4258-B1D9-81CBC8C1E497}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
