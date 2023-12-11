@@ -1,0 +1,88 @@
+﻿@page "/kolcsszures"
+@inject HttpClient _http
+@inject NavigationManager Navi
+
+
+<h3>Itt szűrheti a kölcsönzéseket</h3>
+
+<EditForm Model="k" OnSubmit="HandleSubmit">
+
+        <div>
+            <label for="title">Adja meg olvasószámát</label>
+            <InputNumber id="title" @bind-Value="k.OlvId" class="form-control"/>
+        </div>
+        <br />
+    <button type="submit" class="btn btn-outline-primary">Keresés</button>
+
+</EditForm>
+
+@if(szurt is not null)
+{
+    <table class="table table-hover table-bordered">
+        <thead>
+        <th>Olvasó neve</th>
+        <th>Könyv neve</th>
+        <th>Kölcsönzés kezdete</th>
+        <th>Visszahozási határidő</th>
+        <th></th>
+        </thead>
+        <tbody>
+            @foreach (var kolcs in szurt)
+            {
+                var b = books.Find(x => x.Id.Equals(kolcs.KonyvId));
+                @if (b is not null)
+                {
+                    foreach (var olv in olvasok)
+                    {
+                        <tr>
+                            @if (olv.Id == kolcs.OlvId)
+                            {
+                                <td>@olv.Name</td>
+                                <td>@b.Title</td>
+                                <td>@kolcs.BringOut.ToString("yyyy/MM/dd")</td>
+                                <td>@kolcs.BringBack.ToString("yyyy/MM/dd")</td>
+                                <td>
+                                    <a href="/kolcsonzes/@kolcs.Id">Módosítás</a>
+                                </td>
+                            }
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+    
+}
+
+
+
+@code {
+
+    List<Kolcsonzes>? kolcsonzesek;
+    List<Kolcsonzes>? szurt;
+    List<Konyv>? books;
+    List<Reader>? olvasok;
+
+    Kolcsonzes k = new Kolcsonzes { OlvId = 0, KonyvId = 0, BringOut = DateTime.Now, BringBack = DateTime.Now };
+
+    protected override async Task OnInitializedAsync()
+    {
+        var reskonyv = await _http.GetFromJsonAsync<List<Konyv>>("api/konyv");
+        var resolv = await _http.GetFromJsonAsync<List<Reader>>("api/reader");
+        var reskolcs = await _http.GetFromJsonAsync<List<Kolcsonzes>>("api/kolcsonzes");
+
+        if (reskonyv != null)
+            books = reskonyv;
+        if (resolv != null)
+            olvasok = resolv;
+        if (reskolcs != null)
+            kolcsonzesek = reskolcs;
+    }
+
+    public void HandleSubmit()
+    {
+        Navi.NavigateTo($"/szurt/{k.OlvId}");
+    }
+
+
+}

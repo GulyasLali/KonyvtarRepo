@@ -1,0 +1,81 @@
+﻿@page "/olvasoresz"
+@page "/olvasoresz/{id:int}"
+@inject HttpClient _http
+@inject NavigationManager Navi
+
+
+@if(Id is null)
+{
+    <PageTitle>Könyv hozzáadása</PageTitle>
+    <h3> Adj hozzá egy könyvet!</h3>
+}
+else
+{
+
+    <PageTitle>@r.Name részletei</PageTitle>
+    <h3> @r.Name olvasó adatai</h3>
+}
+
+<EditForm Model="r" OnSubmit="HandleSubmit">
+    <div>
+        <label for="title">Olvasó Neve</label>
+        <InputText id="title" @bind-Value="r.Name" class="form-control" />
+    </div>
+    <div>
+        <label for="auth">Lakhely</label>
+        <InputText id="auth" @bind-Value="r.Address" class="form-control" />
+    </div>
+    <div>
+        <label for="pub">Születési Idő</label>
+        <InputDate id="pub" @bind-Value="r.BirthDate" class="form-control" />
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-outline-primary">Mentés</button>
+    @if(Id is not null)
+    {
+        <button type="button" class="btn btn-outline-danger" @onclick=DeleteReader>Törlés</button>
+    }
+</EditForm>
+
+
+
+@code {
+
+    [Parameter]
+    public int? Id { get; set; }
+
+    Reader r = new Reader { Name = " ", Address = " ", BirthDate = new DateTime() };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if(Id is not null)
+        {
+            var res = await _http.GetFromJsonAsync<Reader>($"api/reader/{Id}");
+
+            if(res is not null)
+            {
+                r = res;
+            }
+        }
+    }
+
+    async Task DeleteReader()
+    {
+        await _http.DeleteAsync($"api/reader/{Id}");
+        Navi.NavigateTo("/olvaso");
+
+    }
+
+    async Task HandleSubmit()
+    {
+        if(Id is null)
+        {
+            await _http.PostAsJsonAsync("api/reader", r);
+        }
+        else
+        {
+            await _http.PutAsJsonAsync($"api/reader/{Id}", r);
+        }
+        Navi.NavigateTo("/olvaso");
+    }
+}

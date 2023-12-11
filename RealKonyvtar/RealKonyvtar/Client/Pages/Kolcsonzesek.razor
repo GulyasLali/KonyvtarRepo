@@ -1,0 +1,74 @@
+﻿@page "/kolcsonzesek"
+@inject HttpClient _http
+@inject NavigationManager Navi
+<h3>Az összes </h3>
+
+
+
+<button @onclick="AddB" class="btn btn-dark">Kölcsönzések szűrése</button>
+<br />
+@if (kolcsonzesek is null)
+{
+    <span>Kölcsönzések betöltése...</span>
+}
+else
+{
+
+    <table class="table table-hover table-bordered">
+        <thead>
+        <th>Olvasó neve</th>
+        <th>Könyv neve</th>
+        <th>Kölcsönzés kezdete</th>
+        <th>Visszahozási határidő</th>
+        <th></th>
+        </thead>
+        <tbody>
+            @foreach (var kolcs in kolcsonzesek)
+            {
+                var b = books.Find(x => x.Id.Equals(kolcs.KonyvId));
+                @if(b is not null)
+                {
+                    foreach (var olv in olvasok)
+                    {
+                        <tr>
+                            @if (olv.Id == kolcs.OlvId)
+                            {
+                                <td>@olv.Name</td>
+                                <td>@b.Title</td>
+                                <td>@kolcs.BringOut.ToString("yyyy/MM/dd")</td>
+                                <td>@kolcs.BringBack.ToString("yyyy/MM/dd")</td>
+                            }
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    List<Konyv>? books;
+    List<Reader>? olvasok;
+    List<Kolcsonzes>? kolcsonzesek;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //var res = await _http.GetFromJsonAsync<IEnumerable<Konyv>>("api/konyv");
+        var reskonyv = await _http.GetFromJsonAsync<List<Konyv>>("api/konyv");
+        var resolv = await _http.GetFromJsonAsync<List<Reader>>("api/reader");
+        var reskolcs = await _http.GetFromJsonAsync<List<Kolcsonzes>>("api/kolcsonzes");
+
+        if (reskonyv != null)
+            books = reskonyv;
+        if (resolv != null)
+            olvasok = resolv;
+        if (reskolcs != null)
+            kolcsonzesek = reskolcs;
+    }
+
+    void AddB()
+    {
+        Navi.NavigateTo("/kolcsszures");
+    }
+}

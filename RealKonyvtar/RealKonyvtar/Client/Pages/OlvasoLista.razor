@@ -1,0 +1,60 @@
+﻿@page "/olvaso"
+@inject HttpClient _http
+@inject NavigationManager Navi
+<h3>Olvasók</h3>
+
+
+
+<button @onclick="AddB" class="btn btn-dark">Olvasó Hozzáadása</button>
+<br />
+@if (readers is null)
+{
+    <span>Olvasók betöltése...</span>
+}
+else
+{
+
+    <table class="table table-hover table-bordered">
+        <thead>
+        <th>Olvasószám</th>
+        <th>Név</th>
+        <th>Lakcím</th>
+        <th>Születési dátum</th>
+        <th></th>
+        </thead>
+        <tbody>
+            @foreach (var reader in readers)
+            {
+                <tr>
+                    <td>@reader.Id</td>
+                    <td>@reader.Name</td>
+                    <td>@reader.Address</td>
+                    <td>@reader.BirthDate.ToString("yyyy/MM/dd")</td>
+                    <td>
+                        <a href="/olvasoresz/@reader.Id">Részletek</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    List<Reader>? readers;
+    //private IEnumerable<Konyv> books { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        //var res = await _http.GetFromJsonAsync<IEnumerable<Konyv>>("api/konyv");
+        var res = await _http.GetFromJsonAsync<List<Reader>>("api/Reader");
+
+        if (res != null)
+            readers = res;
+    }
+
+    void AddB()
+    {
+        Navi.NavigateTo("/olvasoresz");
+    }
+}

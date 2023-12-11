@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MJs7ewwfGl7pppNBAwcygu0PUgTYl+JbFPo/AgSjieJJboK9xCYgOfHcFvMRwo0sjW3dooZ5qOx1wlOdV19WiA==",
+  "dgSpecHash": "PuMoTlKTf1PMBqliG0yeyvQXud7RdSM3yWu5zENyOg2YYPU1R2SfdNmKEKGBtDPSxcUn1PsmUwpyLma91VDdAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lali\\source\\repos\\RealKonyvtar\\RealKonyvtar\\Client\\RealKonyvtar.Client.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,11 @@
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.11\\microsoft.aspnetcore.components.webassembly.7.0.11.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\7.0.11\\microsoft.aspnetcore.components.webassembly.devserver.7.0.11.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.11\\microsoft.aspnetcore.metadata.7.0.11.nupkg.sha512",
+    "C:\\Users\\Lali\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
+    "C:\\Users\\Lali\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.10\\microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",
+    "C:\\Users\\Lali\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.10\\microsoft.entityframeworkcore.analyzers.7.0.10.nupkg.sha512",
+    "C:\\Users\\Lali\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Lali\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.4\\microsoft.extensions.configuration.binder.7.0.4.nupkg.sha512",
@@ -28,6 +33,7 @@
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.jsinterop\\7.0.11\\microsoft.jsinterop.7.0.11.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.11\\microsoft.jsinterop.webassembly.7.0.11.nupkg.sha512",
+    "C:\\Users\\Lali\\.nuget\\packages\\servicestack.interfaces\\8.0.0\\servicestack.interfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",

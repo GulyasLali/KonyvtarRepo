@@ -1,0 +1,140 @@
+﻿@page "/kolcsonzes"
+@page "/kolcsonzes/{id:int}"
+@inject HttpClient _http
+@inject NavigationManager Navi
+
+@if (Id is null)
+{
+    <PageTitle>Könyv kölcsönzése</PageTitle>
+    <h3> Könyv kölcsönzése </h3>
+}
+else
+{
+
+    <PageTitle>Kölcsönzés módosítása</PageTitle>
+    <h3> Kölcsönzés módosítása</h3>
+}
+
+
+
+<EditForm Model="k" OnSubmit="HandleSubmit">
+    @if (Id is null)
+    {
+        <div>
+            <label for="title">Olvasószám</label>
+            <InputNumber id="title" @bind-Value="k.OlvId" class="form-control" />
+        </div>
+        <div>
+            <label for="auth">Könyv könyvtári száma</label>
+            <InputNumber id="auth" @bind-Value="k.KonyvId" class="form-control" />
+        </div>
+        <div>
+            <label for="pub">Kölcsönzés időpontja</label>
+            <p id="pub">@k.BringOut.ToString("yyyy/MM/dd")</p>
+        </div>
+        <div>
+            <label for="auth">Visszahozás határideje</label>
+            <InputDate id="auth" @bind-Value="k.BringBack" class="form-control" />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-outline-primary">Mentés</button>
+    }
+    else
+    {
+        <div>
+            <label for="title">Olvasószám</label>
+            <p id="title">@k.OlvId</p>
+        </div>
+        <div>
+            <label for="auth">Könyv könyvtári száma</label>
+            <p id="auth">@k.KonyvId</p>
+        </div>
+        <div>
+            <label for="pub">Kölcsönzés időpontja</label>
+            <p id="pub">@k.BringOut.ToString("yyyy/MM/dd")</p>
+        </div>
+        <div>
+            <label for="auth">Visszahozás határideje</label>
+            <InputDate id="auth" @bind-Value="k.BringBack" class="form-control" />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-outline-primary">Mentés</button>
+        <button type="button" class="btn btn-outline-danger" @onclick=DeleteReader>Törlés</button>
+    }
+        
+</EditForm>
+@if(cnt == 1)
+{
+    <span>Rossz visszahozási határidő!</span>
+}
+@if (cnt == 2)
+{
+    <span>Ezt a könyvet már kikölcsönözték!</span>
+}
+
+
+
+@code {
+
+    [Parameter]
+    public int? Id { get; set; }
+
+
+    public int cnt = 0; 
+
+    Kolcsonzes k = new Kolcsonzes {OlvId = 1,KonyvId = 1, BringOut = DateTime.Now.Date, BringBack = DateTime.MinValue.Date };
+
+    List<Kolcsonzes>? kolcsonzesek;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var reskolcs = await _http.GetFromJsonAsync<List<Kolcsonzes>>("api/kolcsonzes");
+        if (reskolcs != null)
+            kolcsonzesek = reskolcs;
+    }
+
+
+    async Task DeleteReader()
+    {
+        await _http.DeleteAsync($"api/kolcsonzes/{Id}");
+        Navi.NavigateTo($"/szurt/{k.OlvId}"); 
+
+    }
+
+    async Task HandleSubmit()
+    {
+        var tmpkolcs = kolcsonzesek.Find(kolcs => kolcs.KonyvId.Equals(k.KonyvId));
+        if (Id is null)
+        {
+            if (k.BringBack < k.BringOut)
+            {
+                Console.WriteLine("A visszahozás határideje rossz!");
+                cnt = 1;
+            }
+            else if (tmpkolcs is not null)
+            {
+                Console.WriteLine("Ezt a könyvet már kikölcsönözték!");
+                cnt = 2;
+            }
+            else
+            {
+                await _http.PostAsJsonAsync("api/kolcsonzes", k);
+                Navi.NavigateTo("/kolcsonzesek");
+            }
+
+
+        }
+        else
+        {
+
+            if (k.BringBack < k.BringOut)
+                Console.WriteLine("A visszahozás határideje rossz!");
+            else
+            {
+                await _http.PutAsJsonAsync($"api/kolcsonzes/{Id}", k);
+                Navi.NavigateTo($"/szurt/{k.OlvId}");
+            }
+        }
+        
+    }
+}

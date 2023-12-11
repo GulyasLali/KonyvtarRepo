@@ -549,6 +549,14 @@
           }
         }
       },
+      "ServiceStack.Interfaces/8.0.0": {
+        "runtime": {
+          "lib/net6.0/ServiceStack.Interfaces.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        }
+      },
       "System.Buffers/4.5.1": {},
       "System.CodeDom/4.4.0": {
         "runtime": {
@@ -785,6 +793,10 @@
         }
       },
       "RealKonyvtar.Shared/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.10",
+          "ServiceStack.Interfaces": "8.0.0"
+        },
         "runtime": {
           "RealKonyvtar.Shared.dll": {}
         }
@@ -1174,6 +1186,13 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "ServiceStack.Interfaces/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-orzuwTZ4NIArN4ywzhUTfpMIyNdCvmsxPrgJ5dFV/ympQkUzQ+Ixz35R9doZXCvzfZRWEt7jDXcxiYMCdEVGDA==",
+      "path": "servicestack.interfaces/8.0.0",
+      "hashPath": "servicestack.interfaces.8.0.0.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",

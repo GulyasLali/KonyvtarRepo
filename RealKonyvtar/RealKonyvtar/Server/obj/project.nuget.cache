@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eiouK5z46cRw5P8K8iVt/iNyPRR9ZvaURvErnefxZbmm8bD0miHTdXqhzDEE4K7boNsIrutXzDRuGpl7Es0tSw==",
+  "dgSpecHash": "m61i7f5udxIhbNNGTms7Ki2Xyi4c6OCH5lNUlNTLqY2m+0c7hH5+XBnwd7sVAjtkfYgglaWvksOJKiKv6cPioA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lali\\source\\repos\\RealKonyvtar\\RealKonyvtar\\Server\\RealKonyvtar.Server.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,7 @@
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Lali\\.nuget\\packages\\servicestack.interfaces\\8.0.0\\servicestack.interfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Lali\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",

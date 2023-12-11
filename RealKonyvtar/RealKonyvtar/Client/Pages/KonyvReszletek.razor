@@ -17,6 +17,19 @@ else
     <PageTitle>@k.Title részletei</PageTitle>
     <h3> @k.Title </h3>
 }
+@if (kolcsonzesek is not null)
+{
+    @foreach (var kolcs in kolcsonzesek)
+    {
+        @if (kolcs.KonyvId.Equals(Id))
+        {
+            <br />
+            <span>Kikölcsönözve</span>
+            <br/>
+        }
+
+    }
+}
 
 <EditForm Model="k" OnSubmit="HandleSubmit">
     <div>
@@ -44,18 +57,25 @@ else
 
 
 
+
 @code {
 
     [Parameter]
     public int? Id { get; set; }
 
-    Konyv k = new Konyv { Title = "asd", Author = "basd", Publisher = "sasd" };
+    List<Kolcsonzes>? kolcsonzesek;
+    Konyv k = new Konyv { Title = " ", Author = " ", Publisher = " " };
 
     protected override async Task OnParametersSetAsync()
     {
+
         if(Id is not null)
         {
+            var reskolcs = await _http.GetFromJsonAsync<List<Kolcsonzes>>("api/kolcsonzes");
+
             var res = await _http.GetFromJsonAsync<Konyv>($"api/konyv/{Id}");
+            if (reskolcs is not null)
+                kolcsonzesek = reskolcs;
 
             if(res is not null)
             {

@@ -11,5 +11,7 @@ namespace RealKonyvtar.Server.Data
         }
 
         public DbSet<Konyv> Konyvek {  get; set; }
+        public DbSet<Reader> Olvasok { get; set; }
+        public DbSet<Kolcsonzes> Kolcsonzes { get; set; }
     }
 }
